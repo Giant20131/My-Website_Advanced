@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+    <div class="dashboard">
+        <h1>📊 Issues Dashboard</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Room</th>
+                    <th>Issue</th>
+                    <th>Date</th>
+                    <th>IP</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}
+                <tr>
+                    <td>{{ row["Name"] }}</td>
+                    <td>{{ row["Room"] }}</td>
+                    <td>{{ row["Issue"] }}</td>
+                    <td>{{ row["Date"] }}</td>
+                    <td>{{ row["IP"] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="admin-actions">
+            <a class="btn" href="/download">⬇️ Download Excel</a>
+            <a class="btn danger" href="/clear">🗑 Clear Issues</a>
+            <a class="btn logout" href="/logout">🚪 Logout</a>
+        </div>
+    </div>
+</body>
+</html>
