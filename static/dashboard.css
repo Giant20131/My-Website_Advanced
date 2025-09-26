@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: white;
+    padding: 30px;
+}
+
+.dashboard h1 {
+    text-align: center;
+    color: cyan;
+    text-shadow: 0 0 10px cyan;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #1e1e1e;
+    box-shadow: 0 0 15px cyan;
+}
+
+th, td {
+    border: 1px solid cyan;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #0f2027;
+    color: cyan;
+}
+
+.admin-actions {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn {
+    padding: 10px 15px;
+    margin: 5px;
+    background: cyan;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #00e5ff;
+    box-shadow: 0 0 15px cyan;
+}
+
+.danger {
+    background: red;
+    color: white;
+}
+
+.danger:hover {
+    background: darkred;
+    box-shadow: 0 0 15px red;
+}
+
+.logout {
+    background: orange;
+    color: white;
+}
+
+.logout:hover {
+    background: darkorange;
+    box-shadow: 0 0 15px orange;
+}
