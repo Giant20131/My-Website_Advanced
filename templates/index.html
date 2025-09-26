@@ -1,1 +1,26 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Report Issue</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h2>📝 Report a Technical Issue</h2>
+        <form action="/submit" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="text" name="room" placeholder="Room Number" required>
+            <textarea name="issue" placeholder="Describe the issue..." required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+
+        <hr>
+        <h3>📲 Scan to open on your phone</h3>
+        <img src="{{ url_for('static', filename='form_qr.png') }}" alt="QR Code" width="200">
+        <br><br>
+        <a href="/login" class="btn">🔐 Admin Login</a>
+    </div>
+</body>
+</html>
